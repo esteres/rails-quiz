@@ -12,10 +12,9 @@ table.table
     - @people.each do |person|
       tr
         th[scope="row"]= person&.id
-        td= person.try(:name)
-        td= person.try(:phone)
-        td= person.try(:email)
-        td= person.try(:company).try(:name)
+        td= person&.name
+        td= person&.phone_number
+        td= person&.email
+        td= person&.company&.name
 
-
-
+= paginate @people

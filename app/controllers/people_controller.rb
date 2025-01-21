@@ -1,7 +1,7 @@
 class PeopleController < ApplicationController
 
   def index
-    @people = Person.includes(:company)
+    @people = Person.includes(:company).page(params[:page])
   end
 
   def new
