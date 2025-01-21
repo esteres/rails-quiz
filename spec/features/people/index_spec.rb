@@ -4,7 +4,7 @@ RSpec.describe 'Listing people', type: :feature do
   before do 
     Person.create(
       name: 'Foo Bar',
-      phone_number: 'Biz',
+      phone_number: '(123) 456 7890',
       email: 'Baz'
     )
   end
